@@ -36,8 +36,7 @@ public class MainActivity extends Activity {
 	}
 	
 	private void initUI() {
-		banner = new BannerView(this);
-		banner.setHeightRatio(0.75f);
+		banner = (BannerView) getLayoutInflater().inflate(xyz.eraise.bannerviewdemo.R.layout.header_layout, lvContent, false);
 		lvContent.addHeaderView(banner);
 		
 		MyAdapter _adapter = new MyAdapter(this);

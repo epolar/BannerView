@@ -16,7 +16,7 @@ import xyz.eraise.bannerviewdemo.R;
 /**
  * 创建日期： 2016/6/20.
  */
-public class BannerAdapterImpl extends BannerAdapter {
+public class BannerAdapterImpl extends BaseBannerAdapter {
 
     private LayoutInflater mInflater;
     private List<AdEntity> data;

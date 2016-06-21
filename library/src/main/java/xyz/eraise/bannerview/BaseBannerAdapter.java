@@ -7,7 +7,7 @@ import android.widget.ImageView;
 
 import java.util.LinkedList;
 
-public abstract class BannerAdapter extends PagerAdapter {
+public abstract class BaseBannerAdapter extends PagerAdapter {
 	
 	/**
 	 * 可以重用的View

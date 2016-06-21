@@ -1,17 +1,19 @@
 # BannerView
 
-### ¼ò½é
-»ùÓÚ [LooperViewPager](https://github.com/imbryk/LoopingViewPager) ºÍ [CircleIndicator](https://github.com/ongakuer/CircleIndicator) ·â×°µÄ¹ã¸æÂÖ²¥Í¼¡£
+![Demo](https://github.com/epolar/BannerView/blob/master/screenshot/screenshot-1.png?raw=true)
 
-### ÌØĞÔ
-1. ÎŞÏŞÑ­»·
-2. Ô²ĞÎÖ¸Ê¾
-3. Ö¸Ê¾Æ÷Îªµ¥ÕÅÊ±²»ÏÔÊ¾»òÓÀÔ¶²»ÏÔÊ¾»òÓÀÔ¶ÏÔÊ¾
-4. ¸ß¶ÈÎª¿í¶ÈµÄ±ÈÀı
+### ç®€ä»‹
+åŸºäº [LooperViewPager](https://github.com/imbryk/LoopingViewPager) å’Œ [CircleIndicator](https://github.com/ongakuer/CircleIndicator) å°è£…çš„å¹¿å‘Šè½®æ’­å›¾ã€‚
 
-### Ê¹ÓÃ
-ÉèÖÃ Adapter ¾ÍºÃÁË£¬Îª·½±ãÊ¹ÓÃ£¬Ğ´ÁËÒ»¸ö BaseBannerAdapter £¬¿ÉÒÔ¼Ì³ĞËüÊ¹ÓÃ¡£µã»÷ÊÂ¼şÇëÉèÖÃ setOnBannerClickListener
+### ç‰¹æ€§
+1. æ— é™å¾ªç¯
+2. åœ†å½¢æŒ‡ç¤º
+3. æŒ‡ç¤ºå™¨ä¸ºå•å¼ æ—¶ä¸æ˜¾ç¤ºæˆ–æ°¸è¿œä¸æ˜¾ç¤ºæˆ–æ°¸è¿œæ˜¾ç¤º
+4. é«˜åº¦ä¸ºå®½åº¦çš„æ¯”ä¾‹
 
-### xml ÊôĞÔ
-indicator_gravit: center/left/right Ö¸Ê¾Æ÷µÄÎ»ÖÃÊÇÔÚµ×²¿µÄÖĞ/×ó/ÓÒ
-height_ratio£º ¸ß¶È/¿í¶È µÃµ½µÄ±ÈÀı
+### ä½¿ç”¨
+è®¾ç½® Adapter å°±å¥½äº†ï¼Œä¸ºæ–¹ä¾¿ä½¿ç”¨ï¼Œå†™äº†ä¸€ä¸ª BaseBannerAdapter ï¼Œå¯ä»¥ç»§æ‰¿å®ƒä½¿ç”¨ã€‚ç‚¹å‡»äº‹ä»¶è¯·è®¾ç½® setOnBannerClickListener
+
+### xml å±æ€§
+indicator_gravit: center/left/right æŒ‡ç¤ºå™¨çš„ä½ç½®æ˜¯åœ¨åº•éƒ¨çš„ä¸­/å·¦/å³</br>
+height_ratioï¼š é«˜åº¦/å®½åº¦ å¾—åˆ°çš„æ¯”ä¾‹

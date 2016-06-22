@@ -106,9 +106,16 @@ public class BannerView extends FrameLayout {
 		
 		mViewPager.setBoundaryCaching(true);
 
-		TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.BannerView);
-		heightRatio = ta.getFloat(R.styleable.BannerView_height_ratio, -1f);
-		int indicatorGravity = ta.getInt(R.styleable.BannerView_indicator_gravit, 0);
+		int indicatorGravity = 0;
+		TypedArray ta = null;
+		try {
+			ta = context.obtainStyledAttributes(attrs, R.styleable.BannerView);
+			heightRatio = ta.getFloat(R.styleable.BannerView_height_ratio, -1f);
+			indicatorGravity = ta.getInt(R.styleable.BannerView_indicator_gravit, 0);
+		} finally {
+			if (ta != null)
+				ta.recycle();
+		}
 
 		LayoutParams _indicatorParams = new LayoutParams(LayoutParams.WRAP_CONTENT, dip2px(10));
 		int defaultMargin = dip2px(10);
@@ -269,6 +276,18 @@ public class BannerView extends FrameLayout {
 		} else {
 			super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 		}
+	}
+
+	public void setShowOne(boolean showOne) {
+		isShowOne = showOne;
+		if (mIndicator != null && mIndicator.getChildCount() <= 1)
+			mIndicator.setVisibility(isShowOne ? View.VISIBLE : View.GONE);
+	}
+
+	public void setShowIndicator(boolean showIndicator) {
+		isShowIndicator = showIndicator;
+		if (mIndicator != null)
+			mIndicator.setVisibility(isShowIndicator ? View.VISIBLE : View.GONE);
 	}
 
 	public void setHeightRatio(float ratio) {

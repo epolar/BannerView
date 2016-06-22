@@ -11,6 +11,9 @@
 3. 指示器为单张时不显示或永远不显示或永远显示
 4. 高度为宽度的比例
 
+### 导入
+compile 'xyz.eraise:bannerview:1.0.1'
+
 ### 使用
 设置 Adapter 就好了，为方便使用，写了一个 BaseBannerAdapter ，可以继承它使用。点击事件请设置 setOnBannerClickListener
 

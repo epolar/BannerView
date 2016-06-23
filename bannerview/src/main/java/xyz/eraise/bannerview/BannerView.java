@@ -16,6 +16,7 @@ import xyz.eraise.bannerview.loopviewpager.LoopViewPager;
 
 /**
  * 组合控件，方便做广告轮播图
+ * FIXME 2016-6-23 滚动到一半点击跳转到其他页面，返回回来以后依然停留在原来的滚动未完成的地方，这是个bug
  */
 public class BannerView extends FrameLayout {
 	
@@ -34,7 +35,7 @@ public class BannerView extends FrameLayout {
 	/**
 	 * 轮播速度
 	 */
-	private int autoScrollDelay = 2000;
+	private int autoScrollDelay = 3000;
 	
 	/**
 	 * 自动滚动的Runnable
@@ -44,8 +45,7 @@ public class BannerView extends FrameLayout {
 		@Override
 		public void run() {
 			mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1, true);
-			if (isAutoScroll)
-				postDelayed(mScrollRunnable, autoScrollDelay);
+			timerNext();
 		}
 		
 	};

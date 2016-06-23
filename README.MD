@@ -14,7 +14,7 @@
 ### 导入
 ```
 dependencies {
-    compile 'xyz.eraise:bannerview:1.0.2'
+    compile 'xyz.eraise:bannerview:1.0.3'
 }
 ```
 

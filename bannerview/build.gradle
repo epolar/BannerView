@@ -6,14 +6,13 @@ android {
     buildToolsVersion "21.0.0"
 
     defaultConfig {
-        minSdkVersion 8
+        minSdkVersion 11
     }
 
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
     compile 'com.android.support:support-v4:21.0.0'
 }
 

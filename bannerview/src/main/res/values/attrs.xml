@@ -13,12 +13,15 @@
     </declare-styleable>
 
     <declare-styleable name="BannerView">
-        <attr name="indicator_gravit">
+        <attr name="indicator_gravity">
             <enum name="center" value="0"/>
             <enum name="left" value="1"/>
             <enum name="right" value="2"/>
         </attr>
+        <!-- height / width -->
         <attr name="height_ratio" format="float"/>
+        <!-- 轮播间隔 -->
+        <attr name="scroll_delay" format="integer"/>
     </declare-styleable>
 
 </resources>

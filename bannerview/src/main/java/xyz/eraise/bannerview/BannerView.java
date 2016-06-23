@@ -111,7 +111,8 @@ public class BannerView extends FrameLayout {
 		try {
 			ta = context.obtainStyledAttributes(attrs, R.styleable.BannerView);
 			heightRatio = ta.getFloat(R.styleable.BannerView_height_ratio, -1f);
-			indicatorGravity = ta.getInt(R.styleable.BannerView_indicator_gravit, 0);
+			autoScrollDelay = ta.getInteger(R.styleable.BannerView_scroll_delay, 2000);
+			indicatorGravity = ta.getInt(R.styleable.BannerView_indicator_gravity, 0);
 		} finally {
 			if (ta != null)
 				ta.recycle();
@@ -220,7 +221,7 @@ public class BannerView extends FrameLayout {
 	}
 	
 	/**
-	 * 确认自动轮播
+	 * 自动轮播的时间间隔
 	 * @param autoScrollDelay
 	 */
 	public void setAutoScrollDelay(int autoScrollDelay) {
@@ -250,9 +251,6 @@ public class BannerView extends FrameLayout {
 			startAutoScroll();
 		} else {
 			stopAutoScroll();
-			if (getHandler() != null) {
-				getHandler().removeCallbacksAndMessages(null);
-			}
 		}
 	}
 	

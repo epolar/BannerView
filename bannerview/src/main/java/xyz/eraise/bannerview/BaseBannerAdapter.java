@@ -3,7 +3,6 @@ package xyz.eraise.bannerview;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import java.util.LinkedList;
 
@@ -41,7 +40,7 @@ public abstract class BaseBannerAdapter extends PagerAdapter {
 	
 	@Override
 	public void destroyItem(ViewGroup container, int position, Object object) {
-		ImageView v = (ImageView)object;
+		View v = (View) object;
 		container.removeView(v);
 		if (scrapViews == null) {
 			scrapViews = new LinkedList<>();

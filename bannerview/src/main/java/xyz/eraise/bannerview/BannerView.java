@@ -107,23 +107,34 @@ public class BannerView extends FrameLayout {
 		mViewPager.setBoundaryCaching(true);
 
 		int indicatorGravity = 0;
+		int indicatorHeight = 0;
+		int indicatorMarginDefault = dip2px(10);
+		int indicatorMarginLeft = 0;
+		int indicatorMarginRight = 0;
+		int indicatorMarginTop = 0;
+		int indicatorMarginBottom = 0;
 		TypedArray ta = null;
 		try {
 			ta = context.obtainStyledAttributes(attrs, R.styleable.BannerView);
 			heightRatio = ta.getFloat(R.styleable.BannerView_height_ratio, -1f);
 			autoScrollDelay = ta.getInteger(R.styleable.BannerView_scroll_delay, 2000);
 			indicatorGravity = ta.getInt(R.styleable.BannerView_indicator_gravity, 0);
+			indicatorHeight = ta.getDimensionPixelSize(R.styleable.BannerView_indicator_height, dip2px(10));
+			indicatorMarginDefault = ta.getDimensionPixelSize(R.styleable.BannerView_indicator_margin, indicatorMarginDefault);
+			indicatorMarginLeft = ta.getDimensionPixelSize(R.styleable.BannerView_indicator_marginLeft, indicatorMarginDefault);
+			indicatorMarginRight = ta.getDimensionPixelSize(R.styleable.BannerView_indicator_marginRight, indicatorMarginDefault);
+			indicatorMarginTop = ta.getDimensionPixelSize(R.styleable.BannerView_indicator_marginTop, indicatorMarginDefault);
+			indicatorMarginBottom = ta.getDimensionPixelSize(R.styleable.BannerView_indicator_marginBottom, indicatorMarginDefault);
 		} finally {
 			if (ta != null)
 				ta.recycle();
 		}
 
-		LayoutParams _indicatorParams = new LayoutParams(LayoutParams.MATCH_PARENT, dip2px(10));
-		int defaultMargin = dip2px(10);
-		_indicatorParams.bottomMargin = defaultMargin;
-		_indicatorParams.rightMargin = defaultMargin;
-		_indicatorParams.leftMargin = defaultMargin;
-		_indicatorParams.topMargin = defaultMargin;
+		LayoutParams _indicatorParams = new LayoutParams(LayoutParams.MATCH_PARENT, indicatorHeight);
+		_indicatorParams.bottomMargin = indicatorMarginLeft;
+		_indicatorParams.rightMargin = indicatorMarginRight;
+		_indicatorParams.leftMargin = indicatorMarginTop;
+		_indicatorParams.topMargin = indicatorMarginBottom;
 		if (indicatorGravity == 0) {
 			_indicatorParams.gravity = Gravity.BOTTOM | Gravity.CENTER;
 		} else if (indicatorGravity == 1) {

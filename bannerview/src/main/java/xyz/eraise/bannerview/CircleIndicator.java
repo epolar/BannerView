@@ -289,15 +289,15 @@ public class CircleIndicator extends LinearLayout {
             animator.cancel();
         }
 
-        View Indicator = new View(getContext());
-        Indicator.setBackgroundResource(backgroundDrawableId);
-        addView(Indicator, mIndicatorWidth, mIndicatorHeight);
-        LayoutParams lp = (LayoutParams) Indicator.getLayoutParams();
+        View indicator = new View(getContext());
+        indicator.setBackgroundResource(backgroundDrawableId);
+        addView(indicator, mIndicatorWidth, mIndicatorHeight);
+        LayoutParams lp = (LayoutParams) indicator.getLayoutParams();
         lp.leftMargin = mIndicatorMargin;
         lp.rightMargin = mIndicatorMargin;
-        Indicator.setLayoutParams(lp);
+        indicator.setLayoutParams(lp);
 
-        animator.setTarget(Indicator);
+        animator.setTarget(indicator);
         animator.start();
     }
 

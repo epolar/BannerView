@@ -62,6 +62,12 @@
             <enum name="left" value="1"/>
             <enum name="right" value="2"/>
         </attr>
+        <attr name="indicator_height" format="dimension" />
+        <attr name="indicator_margin" format="dimension" />
+        <attr name="indicator_marginLeft" format="dimension" />
+        <attr name="indicator_marginRight" format="dimension" />
+        <attr name="indicator_marginTop" format="dimension" />
+        <attr name="indicator_marginBottom" format="dimension" />
         <!-- height / width -->
         <attr name="height_ratio" format="float"/>
         <!-- 轮播间隔 -->

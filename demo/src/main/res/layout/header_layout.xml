@@ -4,4 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:height_ratio="0.75"
+    app:ci_width="10dp"
+    app:ci_height="10dp"
     />

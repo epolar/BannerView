@@ -118,10 +118,12 @@ public class BannerView extends FrameLayout {
 				ta.recycle();
 		}
 
-		LayoutParams _indicatorParams = new LayoutParams(LayoutParams.WRAP_CONTENT, dip2px(10));
+		LayoutParams _indicatorParams = new LayoutParams(LayoutParams.MATCH_PARENT, dip2px(10));
 		int defaultMargin = dip2px(10);
 		_indicatorParams.bottomMargin = defaultMargin;
 		_indicatorParams.rightMargin = defaultMargin;
+		_indicatorParams.leftMargin = defaultMargin;
+		_indicatorParams.topMargin = defaultMargin;
 		if (indicatorGravity == 0) {
 			_indicatorParams.gravity = Gravity.BOTTOM | Gravity.CENTER;
 		} else if (indicatorGravity == 1) {
@@ -174,7 +176,7 @@ public class BannerView extends FrameLayout {
 		}
 	}
 	
-	public PagerAdapter getmAdapter() {
+	public PagerAdapter getAdapter() {
 		return mAdapter;
 	}
 

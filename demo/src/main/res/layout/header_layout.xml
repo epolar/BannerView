@@ -6,4 +6,5 @@
     app:height_ratio="0.75"
     app:ci_width="10dp"
     app:ci_height="10dp"
+    app:indicator_height="15dp"
     />

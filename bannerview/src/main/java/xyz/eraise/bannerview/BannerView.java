@@ -301,6 +301,14 @@ public class BannerView extends FrameLayout {
 			mIndicator.setVisibility(isShowIndicator ? View.VISIBLE : View.GONE);
 	}
 
+	public void setScrollable(boolean scrollable) {
+		mViewPager.setScrollable(scrollable);
+	}
+
+	public boolean isScrollable() {
+		return mViewPager.isScrollable();
+	}
+
 	public void setHeightRatio(float ratio) {
 		this.heightRatio = ratio;
 	}

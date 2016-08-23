@@ -1,6 +1,6 @@
 # BannerView
 
-![Demo](https://github.com/epolar/BannerView/blob/master/screenshot/screenshot-1.png?raw=true)
+![Demo](https://github.com/epolar/BannerView/blob/master/screenshot/effect.png?raw=true)
 
 ### 简介
 基于 [LooperViewPager](https://github.com/imbryk/LoopingViewPager) 和 [CircleIndicator](https://github.com/ongakuer/CircleIndicator) 封装的广告轮播图。
@@ -19,7 +19,9 @@ dependencies {
 ```
 
 ### 使用
-设置 Adapter 就好了，为方便使用，写了一个 BaseBannerAdapter ，可以继承它使用。点击事件请设置 setOnBannerClickListener
+- 设置 Adapter 就好了，为方便使用，写了一个 BaseBannerAdapter ，可以继承它使用。点击事件请设置 setOnBannerClickListener。
+- 请在设置完数据(重新设置应该直接setAdapter，而不是notifyDataSetChange)后及 onResume 中调用 `startAutoScroll()`` 方法，在 onPause 中调用 `stopAutoScroll() `
+- 目前单图不允许滚动
 
 ### xml 属性
 - indicator_gravit: center/left/right 指示器的位置是在底部的中/左/右</br>

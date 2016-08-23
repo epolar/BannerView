@@ -1,6 +1,6 @@
 # BannerView
 
-![Demo](https://github.com/epolar/BannerView/blob/master/screenshot/effect.png?raw=true)
+![Demo](https://github.com/epolar/BannerView/blob/master/screenshot/effect.gif?raw=true)
 
 ### 简介
 基于 [LooperViewPager](https://github.com/imbryk/LoopingViewPager) 和 [CircleIndicator](https://github.com/ongakuer/CircleIndicator) 封装的广告轮播图。

@@ -1,4 +1,4 @@
-Deprecated 推荐使用![ViewPageIndicator](https://github.com/LuckyJayce/ViewPagerIndicator)
+Deprecated 推荐使用[ViewPageIndicator](https://github.com/LuckyJayce/ViewPagerIndicator)
 
 # BannerView
 

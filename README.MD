@@ -1,3 +1,5 @@
+Deprecated 推荐使用![ViewPageIndicator](https://github.com/LuckyJayce/ViewPagerIndicator)
+
 # BannerView
 
 ![Demo](https://github.com/epolar/BannerView/blob/master/screenshot/effect.gif?raw=true)
